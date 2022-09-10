@@ -127,14 +127,14 @@ class Deck {
                 for (let i = 0; i < player1HandValue.length; i++){
                     if (player1HandValue[i] > player2HandValue[i]){
                         player1Score ++
-                        window.alert(`Hand ${i + 1} : ${player1Name} drew a ${player1Hand[i]} and 
+                        console.log(`Hand ${i + 1} : ${player1Name} drew a ${player1Hand[i]} and 
                         the Computer drew a ${player2Hand[i]}. ${player1Name} wins`)
                     } else if (player1HandValue[i] < player2HandValue[i]){
                         player2Score ++
-                        window.alert(`Hand ${i + 1} : ${player1Name} drew a ${player2Hand[i]} and 
+                        console.log(`Hand ${i + 1} : ${player1Name} drew a ${player2Hand[i]} and 
                         the Computer drew a ${player1Hand[i]}. the Computer wins`)
                     } else if (player1HandValue[i] = player2HandValue[i]){
-                        window.alert(`Hand ${i + 1} : ${player1Name} drew a ${player1Hand[i]} and 
+                        console.log(`Hand ${i + 1} : ${player1Name} drew a ${player1Hand[i]} and 
                         the Computer drew a ${player2Hand[i]}. It's a tie.`)
                     }
                 }
