@@ -1,3 +1,4 @@
+
 class Card {
     constructor (suit,value){
         this.value = value;
@@ -6,6 +7,14 @@ class Card {
     }
     describe(){
         return `${this.value} of ${this.suit}`
+    }
+}
+
+let checkPlayerHand = (p1,p2) => {
+    if (p1.length === p2.length){
+        return true
+    } else {
+        return false
     }
 }
 
@@ -41,11 +50,10 @@ class Deck {
     deal(){ 
 
         let player1Name = window.prompt("Please enter your name?")
-
         window.alert(`Hello ${player1Name} you will be playing against the Computer today`)
 
-        let player1Hand = [];
-        let player2Hand = [];
+        var player1Hand = [];
+        var player2Hand = [];
         for (let i = 0; i < this.deck.length; i++){
           if( i % 2 == 0){
           player1Hand.push(this.deck[i])
@@ -53,10 +61,16 @@ class Deck {
            player2Hand.push(this.deck[i])}
           }
          
-        
+          
+
+        console.log(checkPlayerHand(player1Hand,player2Hand));
+         
+
+
+
         console.log(player1Hand)
         console.log(player2Hand)
-
+        
 
        
             let player1HandValue = [];
@@ -120,9 +134,8 @@ class Deck {
                     player2HandValue.push(14)
                 } 
             }
-        
-                
-                let player1Score = 0;
+
+           let player1Score = 0;
                 let player2Score = 0;
                 for (let i = 0; i < player1HandValue.length; i++){
                     if (player1HandValue[i] > player2HandValue[i]){
@@ -145,7 +158,14 @@ class Deck {
                 } else return window.alert("It'sa tie!!!")
         
    }
+   
+    
+
 }
+
+
+
+
 
 
    
@@ -164,8 +184,6 @@ class game {
     }
 }
 new game(1);
-
-
 
 
 
